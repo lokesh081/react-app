@@ -4,6 +4,9 @@
 .movie-info p{
     text-align: justify;
 }
+.movie-info {
+    padding-top: 3%;
+}
 .button-three {
     position: relative;
     background-color: #f39c12;

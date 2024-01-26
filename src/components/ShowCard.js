@@ -10,6 +10,7 @@ function ShowCard({ shows, setCurrentShow , setBookTicket }) {
   }
   console.log(shows)
   return (
+    <>
     <div className="cards-list">
       {shows.map((item) => (
         item.show.image !== null && item.show.id ? (
@@ -28,6 +29,7 @@ function ShowCard({ shows, setCurrentShow , setBookTicket }) {
         ) : null
       ))}
     </div>
+    </>
   );
 }
 

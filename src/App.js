@@ -12,6 +12,7 @@ function App() {
   //const [isSignedUp , setSignUp] = useState(false);
   const [isloggedin , setLoggedIn] = useState(false);
   const [user , setUser] = useState('welcome');
+  const [shows, setShows] = useState(null);
 
 
   useEffect(() => {
@@ -44,9 +45,17 @@ function App() {
 
     <div className="App container-md " >
         <Routes>
-          <Route path='/' element={isloggedin ? <Home user = {user} setLoggedIn = {setLoggedIn}/> : <Login setUser={setUser} user = {user} setLoggedIn = {setLoggedIn} getUserData = {getUserData} /> } />
+          <Route 
+            path='/' element={isloggedin ? 
+            <Home shows={shows} setShows={ setShows } user = {user} setLoggedIn = {setLoggedIn}/> 
+            : 
+            <Login setUser={setUser} user = {user} setLoggedIn = {setLoggedIn} getUserData = {getUserData} /> } />
+
           <Route path='/signup' element={ <Signup getUserData = {getUserData}/> } />
-          <Route path='/login' element={<Login setUser={setUser} user = {user} isloggedin = {isloggedin} setLoggedIn = {setLoggedIn} getUserData = {getUserData} /> } />
+
+          <Route 
+            path='/login' 
+            element={<Login setUser={setUser} user = {user} isloggedin = {isloggedin} setLoggedIn = {setLoggedIn} getUserData = {getUserData} /> } />
         </Routes>
     </div>
   )     
