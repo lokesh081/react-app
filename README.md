@@ -1,3 +1,8 @@
+movie app build using react
+
+ticket bookins is not yet implemented
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
